@@ -2,9 +2,19 @@ Just joined GitHub in order to upload a SQL Server script which is too large for
 
 This is a solution for SQL Server. The objective is to calculate the result of a numeric expression held in a character string.  	
 
-The function is called in the usual ways:
-select [myaksess].[dbo].[mthscnvrt09]('1(958577566+(94447+(966988999/795)))')
-select top 10 pict, [myaksess].[dbo].[mthscnvrt09](pict) as mathpict_result from [myaksess].[dbo].[pick4s]
+The user scalar function 'mthscnvrt10' is called in the usual ways:
+
+Ex1. select [myaksess].[dbo].[mthscnvrt10]('(((958577566/94447)+966988999)*785)')
+
+Ex2. select top 10 pict, [myaksess].[dbo].[mthscnvrt10](pict) as mathpict_result from [myaksess].[dbo].[pick4s]
+
+
+Unfortunately, the examples above are being truncated by the text editor window. However the functions are called in the usual ways.
+
+Example1 above is using numeric string "(((958577566/94447)+966988999)*785)" as it's parameter.
+
+Example2 above is using numeric string "column pict from table [myaksess].[dbo].[pick4s]" as it's parameter.
+
 
 If SQLServer allowed us a 'read-only' version of sp_executesql e.g. sp_executesql_ro, then we could get 
 away with only eleven lines of code similar to those below. Also, this would be allowed in a Scalar function, 
