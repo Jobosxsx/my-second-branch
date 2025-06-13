@@ -1,12 +1,10 @@
-Just joined GH in order tp upload a SQL Server script which is too large for Stack overflow. SO only allows 30,000 characters. My script contains 42,000.
-I may have just added the code, fingers crossed.
+Just joined GitHub in order to upload a SQL Server script which is too large for Stack overflow. Stack overflow only allows 30,000 characters. My script contains 42,000. I hope that GitHub will allow me to enter all 43,000 characters.
 
-The function is called in the usual ways.
+This is a solution for SQL Server. The objective is to calculate the result of a numeric expression held in a character string.  	
 
+The function is called in the usual ways:
 select [myaksess].[dbo].[mthscnvrt09]('1(958577566+(94447+(966988999/795)))')
-
 select top 10 pict, [myaksess].[dbo].[mthscnvrt09](pict) as mathpict_result from [myaksess].[dbo].[pick4s]
-
 
 If SQLServer allowed us a 'read-only' version of sp_executesql e.g. sp_executesql_ro, then we could get 
 away with only eleven lines of code similar to those below. Also, this would be allowed in a Scalar function, 
